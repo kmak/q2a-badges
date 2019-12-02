@@ -196,6 +196,8 @@ You may cancel these notices at any time by visiting your profile at the link ab
 					qa_opt('badge_widget_date_max',(int)qa_post_text('badge_widget_date_max'));
 					qa_opt('badge_widget_list_max',(int)qa_post_text('badge_widget_list_max'));
 
+					qa_opt('badge_onsite_notify',(bool)qa_post_text('badge_onsite_notify'));
+
 					qa_opt('badge_email_notify',(bool)qa_post_text('badge_email_notify'));
 					qa_opt('badge_email_notify_on',(bool)qa_post_text('badge_email_notify_on'));
 					qa_opt('badge_email_subject',qa_post_text('badge_email_subject'));
@@ -354,6 +356,13 @@ You may cancel these notices at any time by visiting your profile at the link ab
 				);				
 				$fields[] = array(
 					'type' => 'blank',
+				);
+
+				$fields[] = array(
+					'label' => qa_lang('badges/badge_onsite_notify'),
+					'tags' => 'NAME="badge_onsite_notify" id="badge_onsite_notify"',
+					'value' => (bool)qa_opt('badge_onsite_notify'),
+					'type' => 'checkbox',
 				);
 
 				$fields[] = array(
